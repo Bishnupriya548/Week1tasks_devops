@@ -1,3 +1,32 @@
+#bash scripting
+1.#!/  --shebang
+2. for loop and if else
+eg find the no div by 3 or 5 but not 15 b/w 1 and 100
+      #!/bin/bash
+      #print no b/w 1-100 divisible by or  3 but not 15
+
+        for i in {1..100}; do
+         if  ([ `expr $i % 3` == 0 ] || [ `expr $i % 5` == 0 ]) && [ `expr $i % 15 ` != 0 ];
+        then
+        echo $i
+         fi;
+         done
+3.for loop and if else
+# Loop through numbers 1 to 5
+for i in {1..5}
+do
+  echo "Number: $i"
+done
+4.wc -l --->no of lines in a file
+5.eg. find the no of s  in missisipi
+        #!/bin/bash
+        # here we are counting occurence of s in missisipi
+        x=missisipi
+        grep -o "s" <<< "$x" | wc -l
+
+
+
+
 #"linux commands to demonastrate"
 "A.Navigating file system"
 1.pwd #to show present working directory
